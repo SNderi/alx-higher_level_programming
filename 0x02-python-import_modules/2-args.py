@@ -9,6 +9,6 @@ if __name__ == "__main__":
         break
     else:
         print("{} arguments:".format(size))
-    for i in range(1, len(sys.argv)):
-        print("{}: {}".format(i, argv[i]))
-
+    for i in range(0, len(sys.argv)):
+        if i > 0:
+            print("{}: {}".format(i, argv[i]))
