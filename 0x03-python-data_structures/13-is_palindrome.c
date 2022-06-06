@@ -3,7 +3,7 @@
 /**
  * is_palindrome - checks if a singly linked list is a palindrome
  * @head: Pointer to first node of the list
- * 
+ *
  * Return: 0 if it is not a palindrome, 1 if it is a palindrome
  */
 
@@ -13,7 +13,7 @@ int is_palindrome(listint_t **head)
 	listint_t *rev = NULL;
 	listint_t *current;
 
-	while(temp->next != NULL)
+	while (temp->next != NULL)
 	{
 		current = temp;
 		current->next = *rev;
@@ -21,9 +21,9 @@ int is_palindrome(listint_t **head)
 		temp = temp->next;
 	}
 
-	while(*head->next != NULL)
+	while (*head->next != NULL)
 	{
-		if(rev == *head)
+		if (rev == *head)
 		{
 			rev = rev->next;
 			*head = *head->next;
