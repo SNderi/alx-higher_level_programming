@@ -54,7 +54,7 @@ class Square:
             raise TypeError('position must be a tuple of 2 positive integers')
         self.__position = value
 
-    def __init__(self, size=0, position=(0,0)):
+    def __init__(self, size=0, position=(0, 0)):
         '''Initializes data.
         Args:
             size (int): Default length of Square.
