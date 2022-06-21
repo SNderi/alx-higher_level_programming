@@ -2,7 +2,7 @@
 '''Square module with object variable validation.'''
 
 
-Class Square:
+class Square:
     '''Represents a square with attribute validation.
     Attributes:
         size (int): Length of square (default=0).'''
