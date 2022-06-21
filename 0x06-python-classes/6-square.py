@@ -42,10 +42,10 @@ class Square:
     @position.setter
     def position(self, value):
         '''position mutator.
-        Args:
-            value (int): Tuple of 2 positive integers.
-        Raises:
-            TypeError: If value isn't a tuple of 2 positive integers.'''
+            Args:
+                value (int): Tuple of 2 positive integers.
+            Raises:
+                TypeError: If value isn't a tuple of 2 positive integers.'''
         if not isinstance(value, tuple) and len(value) != 2:
             raise TypeError('position must be a tuple of 2 positive integers')
         if not isinstance(value[0], int) and not isinstance[value[1], int]:
@@ -54,7 +54,7 @@ class Square:
             raise TypeError('position must be a tuple of 2 positive integers')
         self.__position = value
 
-    def __init__(self, size=0):
+    def __init__(self, size=0, position=(0,0)):
         '''Initializes data.
         Args:
             size (int): Default length of Square.
