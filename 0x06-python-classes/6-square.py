@@ -59,8 +59,8 @@ class Square:
         Args:
             size (int): Default length of Square.
             position (tuple): Tuple of 2 positive integers'''
-        self.__size = size
-        self.__position = position
+        self.size = size
+        self.position = position
 
     def area(self):
         '''Finds current square area.
