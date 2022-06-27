@@ -7,7 +7,7 @@ class Rectangle:
     Attributes:
         width (int): Rectangle width size (Defaults to 0)
         height (int): Rectangle height size (Defaults to 0)
-        number_of_instances (int): Keeps count of number of objects in existence
+        number_of_instances (int): Keeps count of objects in existence
 
     Methods:
         area: Returns rectangle area
@@ -72,8 +72,8 @@ class Rectangle:
             raise ValueError('width must be >= 0')
         self.__width = value
 
-     @property
-     def height(self):
+    @property
+    def height(self):
         '''Height accessor
         Returns:
             height

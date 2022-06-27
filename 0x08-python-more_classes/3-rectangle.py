@@ -7,7 +7,7 @@ class Rectangle:
     Attributes:
         width (int): Rectangle width size (Defaults to 0)
         height (int): Rectangle height size (Defaults to 0)
-    
+
     Methods:
         area: Returns rectangle area
         perimeter: Returns rectangle perimeter
@@ -58,8 +58,8 @@ class Rectangle:
             raise ValueError('width must be >= 0')
         self.__width = value
 
-     @property
-     def height(self):
+    @property
+    def height(self):
         '''Height accessor
         Returns:
             height
