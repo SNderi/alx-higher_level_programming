@@ -1,0 +1,108 @@
+Test for 5-text_indentation module
+==============================
+
+Using ''text_indentation''
+---------------------
+
+>>> indent = __import__('5-text_indentation').text_indentation
+
+>>> indent("The quick brown fox")
+The quick brown fox
+
+>>> indent(" Round-robin screech.")
+Round-robin screech.
+<BLANKLINE>
+
+>>> indent("What's your name?")
+What's your name?
+<BLANKLINE>
+
+>>> indent('Holly: Tom $ Tracy. They. Left! for.. the . market?')
+Holly:
+<BLANKLINE>
+Tom $ Tracy.
+<BLANKLINE>
+They.
+<BLANKLINE>
+Left! for.
+<BLANKLINE>
+.
+<BLANKLINE>
+the .
+<BLANKLINE>
+market?
+<BLANKLINE>
+
+>>> indent("Types of Veggies: Tomato, Kale, Carrot")
+Types of Veggies:
+<BLANKLINE>
+Tomato, Kale, Carrot
+
+>>> my_text = ("""Lorem ipsum dolor sit amet, consectetur adipiscing elit. \
+... Quonam modo? Utrum igitur tibi litteram videor an totas paginas commovere? \
+... Non autem hoc: igitur ne illud quidem. Fortasse id optimum, sed ubi illud: \
+... Plus semper voluptatis? Teneo, inquit, finem illi videri nihil dolere. \
+... Transfer idem ad modestiam vel temperantiam, quae est moderatio cupiditatum \
+... rationi oboediens. Si id dicis, vicimus. Inde sermone vario sex illa a Dipylo \
+... stadia confecimus. Sin aliud quid voles, postea. Quae animi affectio suum \
+... cuique tribuens atque hanc, quam dico. Utinam quidem dicerent alium alio \
+... beatiorem! Iam ruinas videres""")
+
+>>> indent(my_text)
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+<BLANKLINE>
+Quonam modo?
+<BLANKLINE>
+Utrum igitur tibi litteram videor an totas paginas commovere?
+<BLANKLINE>
+Non autem hoc:
+<BLANKLINE>
+igitur ne illud quidem.
+<BLANKLINE>
+Fortasse id optimum, sed ubi illud:
+<BLANKLINE>
+Plus semper voluptatis?
+<BLANKLINE>
+Teneo, inquit, finem illi videri nihil dolere.
+<BLANKLINE>
+Transfer idem ad modestiam vel temperantiam, quae est moderatio cupiditatum rationi oboediens.
+<BLANKLINE>
+Si id dicis, vicimus.
+<BLANKLINE>
+Inde sermone vario sex illa a Dipylo stadia confecimus.
+<BLANKLINE>
+Sin aliud quid voles, postea.
+<BLANKLINE>
+Quae animi affectio suum cuique tribuens atque hanc, quam dico.
+<BLANKLINE>
+Utinam quidem dicerent alium alio beatiorem! Iam ruinas videres
+
+>>> indent('.      ?    .')
+.
+<BLANKLINE>
+?
+<BLANKLINE>
+.
+<BLANKLINE>
+>>> indent('')
+
+>>> indent()
+Traceback (most recent call last):
+        ...
+TypeError: text_indentation() missing 1 required positional argument: 'text'
+
+>>> indent(2)
+Traceback (most recent call last):
+        ...
+TypeError: text must be a string
+
+>>> indent(None)
+Traceback (most recent call last):
+	...
+TypeError: text must be a string
+
+>>> indent(['Lemon', 'Orange.', 'Mint'])
+Traceback (most recent call last):
+        ...
+TypeError: text must be a string
+

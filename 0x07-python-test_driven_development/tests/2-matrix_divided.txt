@@ -1,0 +1,75 @@
+Test for 2-matrix_divided module
+==============================
+
+Using ''matrix_divided''
+---------------------
+
+>>> mdiv = __import__('2-matrix_divided').matrix_divided
+
+>>> mat1 = [[1, 2, 3], [4, 5, 6]]
+
+>>> mdiv(mat1, 2)
+[[0.5, 1.0, 1.5], [2.0, 2.5, 3.0]]
+
+>>> mat2 = [[1, -2, 3], [4, 5, -6]]
+
+>>> mdiv(mat2, 3)
+[[0.33, -0.67, 1.0], [1.33, 1.67, -2.0]]
+
+>>> mdiv(mat2, -3)
+[[-0.33, 0.67, -1.0], [-1.33, -1.67, 2.0]]
+
+>>> mat3 = [[0.68, 2, 3.5], [4, 0.345, 6]]
+
+>>> mdiv(mat3, 5)
+[[0.14, 0.4, 0.7], [0.8, 0.07, 1.2]]
+
+>>> mdiv(mat3, 0)
+Traceback (most recent call last):
+        ...
+ZeroDivisionError: division by zero
+
+>>> mdiv(mat3, 'trap')
+Traceback (most recent call last):
+        ...
+TypeError: div must be a number
+
+>>> mat4 = [[1, 'trap', 3], [4, 5, -6]]
+
+>>> mdiv(mat4, 4)
+Traceback (most recent call last):
+        ...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+>>> mat5 = [[1, 2, 3], [4, 5, 'trap']]
+
+>>> mdiv(mat5, 6)
+Traceback (most recent call last):
+        ...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+>>> mat6 = [[1, 2, 3], [4, 5, 6], [7, 8]]
+
+>>> mdiv(mat6, 10)
+Traceback (most recent call last):
+	...
+TypeError: Each row of the matrix must have the same size
+
+>>> mat7 = [[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12], [13, 14, 15, 16]]
+>>> mdiv(mat7, 7)
+[[0.14, 0.29, 0.43, 0.57], [0.71, 0.86, 1.0, 1.14], [1.29, 1.43, 1.57, 1.71], [1.86, 2.0, 2.14, 2.29]]
+
+>>> mdiv(mat7)
+Traceback (most recent call last):
+        ...
+TypeError: matrix_divided() missing 1 required positional argument: 'div'
+
+>>> mdiv(,7)
+Traceback (most recent call last):
+        ...
+SyntaxError: invalid syntax
+
+>>> mdiv(5, 9)
+Traceback (most recent call last):
+        ...
+TypeError: 'int' object is not iterable
