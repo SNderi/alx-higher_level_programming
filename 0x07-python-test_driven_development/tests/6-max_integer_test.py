@@ -12,6 +12,8 @@ class TestMaxInteger(unittest.TestCase):
         '''Using a normal list of integers'''
         list0 = [23, 45, 7, 12, 49]
         self.assertEqual(max_integer(list0), 49)
+        list01 = [45, 5, 32, 44, 7]
+        self.assertEqual(max_integer(list01), 45)
 
     def test_rep(self):
         '''Using a list of repeated values'''
@@ -30,7 +32,7 @@ class TestMaxInteger(unittest.TestCase):
 
     def test_one(self):
         '''Using list with one element'''
-        self.assertEqual(max_integer([0]), 0)
+        self.assertEqual(max_integer([6]), 6)
 
     def test_char(self):
         '''Using list with characters'''
