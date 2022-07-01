@@ -20,7 +20,8 @@ def text_indentation(text):
         if text[tracker] == ' ' and tracker == 0:
             tracker += 1
             continue
-        if text[tracker] == ' ' and (text[tracker - 1] in triggers or text[tracker -1] == ' '):
+        if text[tracker] == ' ' and (text[tracker - 1] in
+                                     triggers or text[tracker - 1] == ' '):
             tracker += 1
             continue
         if text[tracker] in triggers:
