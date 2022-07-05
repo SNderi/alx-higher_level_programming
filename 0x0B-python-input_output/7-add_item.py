@@ -12,10 +12,10 @@ save = __import__('5-save_to_json_file').save_to_json_file
 
 file = 'add_item.json'
 
-arg_list = []
-
-if os.path.exists(file) and os.path.getsize(file) > 0:
+if os.path.isfile(file):
     arg_list = load(file)
+else:
+    arg_list = []
 
 if len(sys.argv) > 1:
     for arg in sys.argv[1:]:
