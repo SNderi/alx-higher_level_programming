@@ -1,6 +1,9 @@
 #!/usr/bin/python3
+''' Module to create the Pascal's triangle '''
+
+
 def pascal_triangle(n):
-    ''' Draws the pascals triangle
+    ''' Draws the pascal's triangle
     Args:
         n: size limit
     Returns:
