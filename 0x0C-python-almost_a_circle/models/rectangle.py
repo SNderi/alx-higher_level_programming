@@ -122,7 +122,7 @@ class Rectangle(Base):
 
         form = '[Rectangle] ({id}) {x}/{y} - {w}/{h}'
         form = form.format(h=self.__height, w=self.__width, id=self.id,
-                        x=self.__x, y=self.__y)
+                           x=self.__x, y=self.__y)
         return form
 
     def update(self, *args, **kwargs):
@@ -166,5 +166,5 @@ class Rectangle(Base):
         ''' Returns the dictionary representation of a Rectangle '''
 
         rect_dict = {'id': self.id, 'width': self.__width,
-                    'height': self.__height, 'x': self.__x, 'y': self.__y}
+                     'height': self.__height, 'x': self.__x, 'y': self.__y}
         return rect_dict
