@@ -21,10 +21,10 @@ class Rectangle(Base):
     def __init__(self, width, height, x=0, y=0, id=None):
         ''' Class constructor '''
         super().__init__(id)
-        self.__width = width
-        self.__height = height
-        self.__x = x
-        self.__y = y
+        self.width = width
+        self.height = height
+        self.x = x
+        self.y = y
 
     @property
     def width(self):
@@ -121,7 +121,7 @@ class Rectangle(Base):
         ''' Returns a string representation of a Rectangle instance. '''
 
         form = '[Rectangle] ({id}) {x}/{y} - {w}/{h}'
-        form = st.format(h=self.__height, w=self.__width, id=self.id,
+        form = form.format(h=self.__height, w=self.__width, id=self.id,
                         x=self.__x, y=self.__y)
         return form
 
@@ -140,13 +140,13 @@ class Rectangle(Base):
                     raise TypeError("id must be an integer")
                 self.id = args[0]
             if len(args) > 1:
-                self.__width = args[1]
+                self.width = args[1]
             if len(args) > 2:
-                self.__height = args[2]
+                self.height = args[2]
             if len(args) > 3:
-                self.__x = args[3]
+                self.x = args[3]
             if len(args) > 4:
-                self.__y = args[4]
+                self.y = args[4]
         else:
             for key, val in kwargs.items():
                 if key == 'id':
@@ -154,13 +154,13 @@ class Rectangle(Base):
                         raise TypeError("id must be an integer")
                     self.id = val
                 if key == 'width':
-                    self.__width = val
+                    self.width = val
                 if key == 'height':
-                    self.__height = val
+                    self.height = val
                 if key == 'x':
-                    self.__x = val
+                    self.x = val
                 if key == 'y':
-                    self.__y = val
+                    self.y = val
 
     def to_dictionary(self):
         ''' Returns the dictionary representation of a Rectangle '''
