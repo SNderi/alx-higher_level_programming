@@ -158,7 +158,3 @@ class TestSquare(unittest.TestCase):
             s1 = Square(10, 2, 1, 9)
             s1_dictionary = s1.to_dictionary("Hi")
         self.assertEqual(s, str(x.exception))
-
-
-if __name__ == '__main__':
-    unittest.main()
