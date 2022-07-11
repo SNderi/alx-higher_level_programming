@@ -7,9 +7,23 @@ from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
-    ''' Represents a square '''
+    ''' Represents a square
+    Methods:
+        area - inherited from rectangle
+        display - inherited from rectangle
+        to_dictionary - returns dictionary representation of object square
+        update - updates attributes of an object
+    '''
+
     def __init__(self, size, x=0, y=0, id=None):
-        ''' Class constructor '''
+        ''' Class constructor
+        Args:
+            __size: square length
+            __x
+            __y
+            id: object id
+        '''
+
         self.size = size
         super().__init__(size, size, x, y, id)
 
@@ -42,6 +56,14 @@ class Square(Rectangle):
         self.__height = val
 
     def update(self, *args, **kwargs):
+        ''' Updates attributes of an instance.
+        Args:
+            id
+            size
+            x
+            y
+        '''
+
         if args is not None and len(args) != 0:
             if len(args) > 0:
                 if type(args[0]) != int and args[0] is not None:
