@@ -1,4 +1,5 @@
 # Python - Object-relational mapping
+
 ## Concepts covered
 1. OOP
 2. MySQL
