@@ -10,18 +10,18 @@ request(reqUrl, (err, response, body) => {
   }
   const data = JSON.parse(body);
   const actors = data.characters;
-  printactors (actors, 0)
+  printactors(actors, 0);
 });
 
 function printactors (actors, idx) {
-  if ( idx === actors.length) {
+  if (idx === actors.length) {
     return;
   }
   request(actors[idx], (err, response, body) => {
     if (err) {
-    console.error(err);
+      console.error(err);
     }
     console.log(JSON.parse(body).name);
-    printactors(actors, idx + 1)
+    printactors(actors, idx + 1);
   });
 }
