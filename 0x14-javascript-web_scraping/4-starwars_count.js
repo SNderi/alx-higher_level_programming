@@ -15,8 +15,7 @@ request(reqUrl, (err, response, body) => {
   const antilles = '18';
   for (const i of results) {
     for (const j of i.characters) {
-      if (j.search(antilles) > 0)
-        moviesNum++;
+      if (j.search(antilles) > 0) { moviesNum++; }
     }
   }
   console.log(moviesNum);
