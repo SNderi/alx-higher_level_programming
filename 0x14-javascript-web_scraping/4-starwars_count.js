@@ -12,14 +12,11 @@ request(reqUrl, (err, response, body) => {
   const data = JSON.parse(body);
   const results = data.results;
   let moviesNum = 0;
-  const antilles = 'https://swapi-api.hbtn.io/api/people/18/';
-
-  for (let idx = 0; idx < data.count; idx++) {
-    const actors = results[idx].characters;
-    for (const actor in actors) {
-      if (actors[actor] === antilles) {
-        moviesNum += 1;
-      }
+  const antilles = '18';
+  for (const i of results) {
+    for (const j of i.characters) {
+      if (j.search(antilles) > 0)
+        moviesNum++;
     }
   }
   console.log(moviesNum);
