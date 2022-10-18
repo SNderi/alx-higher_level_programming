@@ -13,11 +13,10 @@ request(reqUrl, (err, response, body) => {
   for (const item in todos) {
     const key = todos[item];
     const id = key.userId;
-    if (id in tasks === false) {
-      tasks[id] = 0;
-    }
-    if (key.completed) {
-      tasks[id] = tasks[id] + 1;
+    if (id in tasks === false && key.completed) {
+      tasks[id] = 1;
+    } else if (key.completed) {
+      tasks[id] += 1;
     }
   }
   console.log(tasks);
