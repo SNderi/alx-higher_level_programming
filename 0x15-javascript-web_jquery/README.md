@@ -14,6 +14,7 @@
 ### How to listen/bind to user events
 ## Table of Contents
 File | Description
+---- | -----------
 [0-script.js](./0-script.js) | JavaScript script that updates the text color of the <header> element to red (#FF0000) using `document.querySelector`.
 [1-script.js](./1-script.js) | JavaScript script that updates the text color of the <header> element to red (#FF0000) using JQuery API.
 [2-script.js](./2-script.js) | JavaScript script that updates the text color of the <header> element to red (#FF0000) when the user clicks on the tag `DIV#red_header`.
